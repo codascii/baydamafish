@@ -1,0 +1,19 @@
+baydamafish_product_homepage:
+    path:     /
+    defaults:
+      _controller: BaydamafishProductBundle:Product:index
+
+baydamafish_product_new:
+    path:     /new
+    defaults:
+      _controller: BaydamafishProductBundle:Product:new
+
+baydamafish_product_recommended:
+    path:     /recommended
+    defaults:
+      _controller: BaydamafishProductBundle:Product:recommended
+
+baydamafish_product_reserve:
+    path:     /reserve
+    defaults:
+      _controller: BaydamafishProductBundle:Product:reserve

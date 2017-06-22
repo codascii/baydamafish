@@ -1,0 +1,5 @@
+baydamafish_product:
+    resource: "@BaydamafishProductBundle/Resources/config/routing.yml"
+    prefix:   /product
+
+
