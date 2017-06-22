@@ -1,0 +1,3 @@
+baydamafish_app_homepage:
+    path:     /
+    defaults: { _controller: BaydamafishAppBundle:Default:index }
