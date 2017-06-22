@@ -1,3 +1,19 @@
 baydamafish_app_homepage:
     path:     /
-    defaults: { _controller: BaydamafishAppBundle:Default:index }
+    defaults:
+        _controller: BaydamafishAppBundle:App:index
+
+baydamafish_app_about:
+    path:     /about
+    defaults:
+        _controller: BaydamafishAppBundle:App:about
+
+baydamafish_app_help:
+    path:     /help
+    defaults:
+        _controller: BaydamafishAppBundle:App:help
+
+baydamafish_app_contact:
+    path:     /contact
+    defaults:
+        _controller: BaydamafishAppBundle:App:contact
