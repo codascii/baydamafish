@@ -15,8 +15,8 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Baydamafish\ProductBundle\BaydamafishProductBundle(),
             new Baydamafish\AppBundle\BaydamafishAppBundle(),
+            new Baydamafish\ProductBundle\BaydamafishProductBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
