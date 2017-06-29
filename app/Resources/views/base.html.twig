@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+	<head>
+	    <meta charset="utf-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}" />
+	    <link rel="help" href="/help" />
+		<title>{% block title %}Baydamafish{% endblock %}</title>
+		{% block stylesheets %}
+	    {# On charge le CSS de bootstrap depuis le site directement #}
+	    <link rel="stylesheet" type="text/css" href="{{ asset('css/baydamafish.css') }}">
+	    {% endblock %}
+	</head>
+	<body>
+		<header class="container-fluid bg-primary">
+			<nav class="container navbar" role="navigation">
+				<div class="row">
+					<div class="col-lg-1">
+						<img src="{{ asset('favicon.png') }}" class="img-responsive" id="logo"/>
+					</div>
+					<div class="col-lg-6 col-lg-offset-5">
+						<ul class="nav navbar-nav">
+				            <li><a href="{{ path('baydamafish_app_homepage') }}">ACCUEIL</a></li>
+				            <li><a href="{{ path('baydamafish_app_about') }}">A PROPOS DE NOUS</a></li>
+				            <li><a href="{{ path('baydamafish_app_help') }}">AIDE</a></li>
+				            <li><a href="{{ path('baydamafish_app_contact') }}">CONTACT</a></li>
+				            <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-search"></span></a></li>
+				        </ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container-fluid">
+	        {% block body %}
+	        {% endblock %}
+	    </div>
+		<footer class="container-fluid">
+			<div class="container">FOOTER</div>
+		</footer>
+		{% block javascripts %}
+    	{# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
+    	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  		{% endblock %}
+	</body>
 </html>
