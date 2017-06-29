@@ -13,3 +13,10 @@
 /vendor/
 /web/bundles/
 /web/css/
+/web/fonts/
+/web/sass/
+!/web/_bootstrap.scss
+/web/sass/.sass-cache/
+/web/sass/bootstrap/*
+!/web/sass/bootstrap/_variables.scss
+/web/favicon.png
